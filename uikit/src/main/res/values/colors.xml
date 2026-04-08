@@ -1,0 +1,11 @@
+<resources>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+    <color name="pink_left">#FF6480</color>
+    <color name="pink_right">#F22E63</color>
+
+    <color name="white">#FFFFFF</color>
+</resources>

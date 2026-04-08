@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="UKButton">
+        <attr name="buttonType" format="enum">
+            <enum name="type1" value="1" />
+            <enum name="type2" value="2" />
+            <enum name="type3" value="3" />
+            <enum name="type4" value="4" />
+        </attr>
+
+        <attr name="exampleColor" format="string" />
+    </declare-styleable>
+</resources>
