@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -41,14 +42,14 @@ public class UKButton extends AppCompatButton {
                     setBackgroundColor(Color.TRANSPARENT);
                     setText("Logout");
                     setCompoundDrawables(icon, null, null, null);
-                    setCompoundDrawablePadding(16);
+                    setCompoundDrawablePadding((int) (16 * getResources().getDisplayMetrics().density));
                     setTextColor(Color.BLACK);
                     setGravity(Gravity.CENTER_VERTICAL); break;
                 case 3:
                     setBackgroundColor(Color.TRANSPARENT);
                     setText("Logout");
                     setCompoundDrawables(null, null, null, icon);
-                    setCompoundDrawablePadding(16);
+                    setCompoundDrawablePadding((int) (16 * getResources().getDisplayMetrics().density));
                     setTextColor(Color.BLACK);
                     setGravity(Gravity.CENTER_HORIZONTAL); break;
                 case 4:
@@ -64,5 +65,6 @@ public class UKButton extends AppCompatButton {
 
         setAllCaps(false);
         setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        setTypeface(androidx.core.content.res.ResourcesCompat.getFont(context, R.font.title1extrabold));
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Убираем верхнюю, левую и правую границы -->
+
+    <!-- Нижняя розовая линия -->
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="2dp" />
+            <solid android:color="#FF6B81" />
+        </shape>
+    </item>
+</layer-list>

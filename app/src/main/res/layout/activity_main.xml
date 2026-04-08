@@ -8,14 +8,26 @@
     tools:context=".MainActivity">
 
     <com.example.uikit.UKButton
+        android:id="@+id/UKButton"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
 
-        app:buttonType="type4"
-
+        app:buttonType="type2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.uikit.UKInputField
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
