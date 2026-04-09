@@ -8,18 +8,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
-import com.example.network_layer.data.RetrofitGameClient;
-import com.example.network_layer.domain.GameNetworkClient;
+import com.example.presentation.GameVIewModel;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class MyGameActivity extends AppCompatActivity {
@@ -29,6 +26,8 @@ public class MyGameActivity extends AppCompatActivity {
     private ArrayList<Bitmap> originalBitmaps = new ArrayList<>();
     GridLayout grid;
     int tileSize;
+
+    GameVIewModel model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +67,17 @@ public class MyGameActivity extends AppCompatActivity {
                 tiles[i][j] = iv;
             }
         }
+
+
+        model = new ViewModelProvider(this).get(GameVIewModel.class);
+        model.getName("vblinov2009.rus@yandex.ru", "12345678").observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Toast.makeText(MyGameActivity.this, s, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     private class TileTouchListener implements View.OnTouchListener {
