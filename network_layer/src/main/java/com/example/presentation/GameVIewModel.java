@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.data.Repository;
+import com.example.data.RepositoryImpl;
 
 public class GameVIewModel extends ViewModel {
-    private Repository repository = new Repository();
+    private RepositoryImpl repository = new RepositoryImpl();
 
     MutableLiveData<String> name = new MutableLiveData<>();
 

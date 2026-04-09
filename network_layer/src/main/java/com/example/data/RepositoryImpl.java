@@ -1,11 +1,8 @@
 package com.example.data;
 
-import static android.widget.Toast.LENGTH_SHORT;
-
 import android.util.Log;
-import android.widget.Toast;
 
-import java.util.Map;
+import com.example.domain.Repository;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -13,14 +10,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Repository {
+public class RepositoryImpl implements Repository {
     Retrofit builder;
 
     public interface MyCallback<T> {
         void onResult(T data);
     }
 
-    public Repository() {
+    public RepositoryImpl() {
         builder = new Retrofit.Builder().baseUrl("https://web-production-2e91f.up.railway.app/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
     }
