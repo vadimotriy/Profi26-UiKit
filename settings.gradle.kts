@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Profi26-UiKit"
 include(":app")
 include(":uikit")
+include(":network_layer")

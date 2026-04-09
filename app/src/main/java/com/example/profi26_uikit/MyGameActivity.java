@@ -15,6 +15,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.network_layer.data.RetrofitGameClient;
+import com.example.network_layer.domain.GameNetworkClient;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
