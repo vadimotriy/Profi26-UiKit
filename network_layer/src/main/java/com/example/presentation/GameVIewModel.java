@@ -11,6 +11,9 @@ public class GameVIewModel extends ViewModel {
 
     MutableLiveData<String> name = new MutableLiveData<>();
 
+    MutableLiveData<String> name2 = new MutableLiveData<>();
+
+
     public LiveData<String> getName(String email, String pswrd){
         repository.getName(email, pswrd, result -> {
             // Как только сервер ответит, LiveData обновится
