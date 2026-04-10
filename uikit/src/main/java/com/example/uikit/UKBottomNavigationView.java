@@ -17,12 +17,13 @@ public class UKBottomNavigationView extends LinearLayout {
 
     private void init(Context context) {
         setOrientation(HORIZONTAL);
-        setGravity(Gravity.CENTER_VERTICAL);
+        setGravity(Gravity.CENTER);
+        setBackgroundResource(R.drawable.b);
 
         for (int i = 0; i < 5; ++i) {
             TextView tv = new TextView(context);
 
-            LayoutParams params = new LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
+            LayoutParams params = new LayoutParams(0, LayoutParams.MATCH_PARENT, 1);
             tv.setLayoutParams(params);
 
             int finalI = i;
@@ -30,9 +31,6 @@ public class UKBottomNavigationView extends LinearLayout {
 
             addView(tv);
         }
-
-        setSelectedTab(0);
-        setBackgroundResource(R.drawable.b);
     }
 
     public void setSelectedTab(int index) {
